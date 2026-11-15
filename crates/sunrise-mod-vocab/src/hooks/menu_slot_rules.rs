@@ -21,6 +21,7 @@ pub trait Hooks {
     /// (`context.slot(container, index)`), built once per click plan and
     /// filled the same on the server and on the client's prediction. Parts that read `context.setting(..)` or `side()` have no
     /// counterpart on the Host. Named injections request `hook_version = 4`.
+    /// A client without this mod predicts vanilla here; the server corrects it.
     #[hook(
         side = "both",
         contract = "listen",

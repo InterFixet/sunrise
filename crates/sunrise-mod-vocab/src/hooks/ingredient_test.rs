@@ -7,6 +7,7 @@ pub trait Hooks {
     /// named the item; an empty custom list does not filter it). Set `accept` to false to refuse the stack — its components
     /// are the usual reason. The hook may be called many times a craft; the
     /// answer must be the same for the same stack. It is given the loop `context` of the side that runs the match (its registries, settings and mod list); it fires inside recipe matching, so it takes no `Host`.
+    /// A client without this mod predicts vanilla here; the server corrects it.
     #[hook(
         side = "both",
         contract = "listen",

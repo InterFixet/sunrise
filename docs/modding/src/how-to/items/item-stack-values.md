@@ -85,6 +85,8 @@ before applying them. These are output guarantees, not whole-world transactions:
 refused output. Carrier-form callbacks such as `bonemeal` and `item_after_vertical_collision`
 also retain their captured stack outputs on refusal but do not journal independent host writes.
 
+A client without this mod predicts vanilla here; the server corrects it.
+
 Item-model callbacks receive the owned stack and a separate `bundle_selected` number (`-1`
 means none). Runtime selection is not a persistent component. Drawing receives the API-owned
 `ItemDisplayContext`, not the renderer's enum.

@@ -32,6 +32,7 @@ pub trait Hooks {
     /// the no-listener data path performs no conversion or entity lookup.
     /// Target type, position, health, maximum health, alive/living status and physical
     /// equipment are retained outside traversal; other Host reads can allocate.
+    /// A client without this mod predicts vanilla here; the server corrects it.
     #[hook(
         side = "both",
         version = 2,

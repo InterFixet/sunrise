@@ -39,6 +39,7 @@ The server reads its owning load; the client reads local preload sets before its
 `UpdateRecipes`, then the authoritative server generation. A packet replaces the entire
 generation, including an empty one. Closing a screen or changing dimension retains it;
 disconnecting discards it. Reads allocate nothing and do not rescan recipes or registries.
+A client without this mod predicts vanilla here; the server corrects it.
 
 Parts that read `context.setting(..)` or `side()` have no counterpart on the Host.
 Named injections for `menu_slot_rules` request `hook_version = 4`.

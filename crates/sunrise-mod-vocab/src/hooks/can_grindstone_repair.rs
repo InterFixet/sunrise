@@ -21,6 +21,7 @@ pub trait Hooks {
     /// alone, and fast. With no part on the stack's item the cost is one table lookup, and
     /// the stack isn't converted. The contract beyond the method's name and parameters is
     /// Sunrise's reading, not checked against NeoForge's. Diverges from upstream: new hook.
+    /// A client without this mod predicts vanilla here; the server corrects it.
     #[hook(
         side = "both",
         contract = "listen",

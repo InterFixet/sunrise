@@ -12,6 +12,7 @@ pub trait Hooks {
     /// Pass and TryWithEmptyHand fall through on this entity path.
     /// A server-only answer leaves the client's off-hand prediction unchanged.
     /// ClientHost permits reads and local effects, not authoritative writes.
+    /// A client without this mod predicts vanilla here; the server corrects it.
     #[hook(
         side = "both",
         version = 2,

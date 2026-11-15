@@ -2,6 +2,7 @@
 
 pub trait Hooks {
     /// NeoForge's `ItemStackedOnOtherEvent`, before either item override. It runs inside a pickup click. Answer from the arguments and `context` alone, and fast: `context` holds the side, the registries and the settings of the resource generation, and a `/reload` builds the next one.
+    /// A client without this mod predicts vanilla here; the server corrects it.
     #[hook(
         side = "both",
         contract = "cancel",

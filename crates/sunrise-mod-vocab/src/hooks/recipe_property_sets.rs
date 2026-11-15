@@ -15,6 +15,7 @@ pub trait Hooks {
     /// unknown vanilla keys, and air are logged and skipped; unknown items are
     /// ignored. Custom sets are synced to clients alongside vanilla sets. The
     /// answer must be the same every time.
+    /// A client without this mod predicts vanilla here; the server corrects it.
     #[hook(
         side = "both",
         contract = "collect",

@@ -35,6 +35,7 @@ pub trait Hooks {
     /// the action. Single player uses this same server contract.
     /// Item-internal triggers (such as shears) can legitimately
     /// fire `item_used_on_block` in addition to the game mode's trigger.
+    /// A client without this mod predicts vanilla here; the server corrects it.
     #[hook(
         side = "both",
         contract = "cancel",

@@ -18,6 +18,7 @@ pub trait Hooks {
     /// lookup, and the stack isn't converted. The contract beyond the method's name and
     /// parameters is Sunrise's reading, not checked against NeoForge's. Diverges from
     /// upstream: new hook.
+    /// A client without this mod predicts vanilla here; the server corrects it.
     #[hook(
         side = "both",
         contract = "listen",

@@ -9,6 +9,7 @@ pub trait Hooks {
     /// fall through. A server-only answer leaves client off-hand prediction
     /// unchanged. ClientHost permits reads and local effects, not authoritative
     /// writes. Armor stands, other players and dragon parts are not covered.
+    /// A client without this mod predicts vanilla here; the server corrects it.
     #[hook(
         side = "both",
         version = 2,

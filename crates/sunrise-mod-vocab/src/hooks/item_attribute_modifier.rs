@@ -10,6 +10,7 @@ pub trait Hooks {
     /// attribute sync and the tooltip. A worn stack is asked again only when it
     /// changes (`ItemStack.matches`), so the answer must be the same for the
     /// same stack. Asked on the server and on a client (its tooltips).
+    /// A client without this mod predicts vanilla here; the server corrects it.
     #[hook(
         side = "both",
         contract = "listen",

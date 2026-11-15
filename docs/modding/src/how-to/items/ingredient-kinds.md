@@ -14,6 +14,8 @@ This list supplies recipe-book placement candidates. Use the [match-time hook](i
 - Return a consistent answer for the same input. If no mod listens to the `ingredient` hook, a recipe file naming a custom kind fails whole at load with an error naming the file and the kind, and the recipe is absent everywhere. If a mod listens but leaves the list empty, the recipe and its match-time predicate are retained, with a warning naming the file and the kind that the recipe cannot be placed. It is excluded from recipe-book learning/displays, recipe property sets and stonecutter selections; the server also refuses recipe-book placement. The effective recipe map and manual matcher still retain it.
 - An existing empty item tag likewise retains an unplaceable recipe, but never matches a stack. An undefined tag fails the recipe with an error. A direct empty list (`[]`) remains invalid and fails the recipe with an error.
 
+A client without this mod predicts vanilla here; the server corrects it.
+
 ## Ingredient data
 
 Read `event.data` as an API `Compound`, using typed `Tag` variants such as `Int`, `Long`, `List` and `Compound`, not JSON accessors.

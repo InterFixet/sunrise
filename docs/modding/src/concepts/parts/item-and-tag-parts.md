@@ -90,6 +90,8 @@ Answer on the client as well when prediction must stop the hand loop: an answer
 made only on the server cannot suppress an offhand attempt already predicted by
 the client.
 
+A client without this mod predicts vanilla here; the server corrects it.
+
 `Success`, `SuccessServer` and `Consume` consume the interaction and end the
 client's hand loop. Only `Success` swings on the client; `SuccessServer` swings
 on the server and `Consume` never swings. `Fail` ends block interaction only,
@@ -178,6 +180,8 @@ Three methods answer item questions that vanilla asks inside its menus and recip
 sides, the server's menus and the client's own result display, so they take the loop `context` and no `Host`:
 answer from `event.stack` and `context` alone, and fast. Each `event` field arrives holding vanilla's answer, which
 the part may set either way, and an item with no such part costs one table lookup.
+
+A client without this mod predicts vanilla here; the server corrects it.
 
 - `ItemPart::can_grindstone_repair` is `IItemExtension.canGrindstoneRepair`. `event.can_repair` starts with
   whether the stack is damageable. It is asked for the top input when both grindstone inputs are single stacks of

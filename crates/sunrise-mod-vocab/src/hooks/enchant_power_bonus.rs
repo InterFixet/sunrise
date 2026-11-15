@@ -18,6 +18,7 @@ pub trait Hooks {
     /// answer requires a parts/tag reload.
     /// No hook is called per tick or frame. With no part attached, the only dispatch cost is one
     /// block subscription lookup before event conversion. Diverges from upstream: new hook.
+    /// A client without this mod predicts vanilla here; the server corrects it.
     #[hook(
         side = "both",
         version = 2,

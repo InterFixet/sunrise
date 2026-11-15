@@ -29,6 +29,7 @@ pub trait Hooks {
     /// is refused at load with an error naming the file and the kind. An empty list retains the custom
     /// predicate but makes the recipe unplaceable: the loader warns (naming the file and the kind), omits
     /// property sets and stonecutter selection, and refuses book placement.
+    /// A client without this mod predicts vanilla here; the server corrects it.
     #[hook(
         side = "both",
         contract = "collect",
